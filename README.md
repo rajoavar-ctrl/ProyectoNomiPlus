@@ -23,18 +23,6 @@ This project simulates real salary calculator including extra gains, deductions,
 
 ---
 
-
-## Project Structure
-
-ProyectoNomiPlus/
-│
-├── Calculadora_nomina.html
-├── calculadoraNomina.js
-├── style.css
-└── README.md
-
----
-
 ## Author
 
 Rafael Jose Avila Arrieta  
