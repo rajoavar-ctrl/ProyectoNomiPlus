@@ -1,6 +1,6 @@
 # Proyecto NomiPlus
 
-This is a application web, is focused on payroll calculator. Built with : HTML, CSS and vanilla JavaScript.  
+This is an application web focused on payroll calculator. Built with : HTML, CSS and vanilla JavaScript.  
 This project simulates real salary calculator including extra gains, deductions, and total payment.
 
 ---
