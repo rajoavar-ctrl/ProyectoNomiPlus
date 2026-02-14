@@ -1,7 +1,7 @@
 # 💼 Proyecto NomiPlus
 
-This is a application web focused on payroll calculator built with HTML, CSS and vanilla JavaScript.  
-This project simulates real salary calculations including earnings, deductions, and total payment.
+This is a application web, is focused on payroll calculator. Built with : HTML, CSS and vanilla JavaScript.  
+This project simulates real salary calculator including extra gains, deductions, and total payment.
 
 ---
 
@@ -35,13 +35,7 @@ ProyectoNomiPlus/
 
 ---
 
-## 🌐 Live Demo
+## Author
 
-(You can enable GitHub Pages and paste the link here)
-
----
-
-## 📌 Author
-
-Rafael Avila Arrieta  
+Rafael Jose Avila Arrieta  
 Software Development Student
