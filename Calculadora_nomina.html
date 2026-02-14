@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Calculadora de nómina interactiva</title>
+    <link rel="stylesheet" href="nominaStilos.css">
+  </head>
+  <!-- Cuerpo de la pagina-->
+  <body>
+    <!-- Primera seccion-->
+      <div class="container">
+        <h1> Calculadora de Nómina</h1>
+
+        <div class = "seccion-basica">
+          <h2> Sueldo Base</h2>
+
+          <div class = "fila">
+
+            <div class="campo">
+              <label for="salarioBase">Básico</label>
+              <input type="text" id="salarioBase" value="1750000" class="input-moneda">
+            </div>
+
+            <div class="campo">
+              <label for="auxilioTransporte">Auxilio de transporte</label>
+               <input type="text" id="auxilioTransporte" value="250000" class="input-moneda">
+            </div>
+            
+            <div class="campo">
+              <label for="horasMensuales">Horas Reglamentarias</label>
+              <input type="number" id="horasMensuales" value="220">
+            </div>
+
+            <div class="campo">
+                <label for="diasTrabajados">Días Trabajados</label>
+                <input type="number" id="diasTrabajados" value="30">
+            </div>
+
+            <div class = "campo">
+              <label for="valorHora"> Valor Hora</label>
+              <div class="valor-calculado" id="valorHora">$ 0,00</div>
+            </div> 
+
+            <div class = "campo">
+              <label for="devengado"> Devengado Base</label>
+              <div class="valor-calculado" id="devengado">$ 0,00</div>
+            </div> 
+
+          </div>
+        
+        </div>  
+        
+        
+         <!-- SECCIÓN HORAS EXTRAS (DINÁMICA) -->
+        <div class="seccion-extras">
+            <h2>Horas extra y recargos</h2>
+            
+            <!-- Botón y selector para agregar conceptos -->
+            <div class="agregar-concepto">
+                <button type="button" id="btnAgregar" class="btn-agregar" title="Agregar concepto">+</button>
+                <select id="selectorConcepto" class="selector-concepto">
+                    <option value="">Seleccione concepto</option>
+                    <option value="extraNocturna">Horas extras nocturnas 1.75%</option>
+                    <option value="extraFestivaDiurna">Horas extras diurnas festivas 2.05%</option>
+                    <option value="extraFestivaNocturna">Horas extras nocturna festivas 2.55%</option>
+                    <option value="recargoNocturno">Recargo nocturno 0.35%</option>
+                    <option value="ordinariaFestiva">Hora ordinaria festiva 1.80%</option>
+                    <option value="recargoNocturnoFestivo">Recargo nocturno festivo 2.15</option>
+                    <option value="diaFamilia">Día de la familia</option>
+                    <option value="otrosConceptos">Otros Conceptos</option>
+                </select>
+            </div>
+            
+            <!-- Tabla de conceptos agregados -->
+            <table id="tablaHorasExtras">
+                <thead>
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Horas</th>
+                        <th>Valor Unidad</th>
+                        <th>Valor Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="bodyHorasExtras">
+                    <!-- Las filas se agregan dinámicamente aquí -->
+                </tbody>
+            </table>
+            
+            <div class="total-devengado">
+                <strong>Total Devengado: <span id="totalDevengado">$ 0</span></strong>
+            </div>
+        </div>
+        
+        <!-- SECCIÓN DEDUCCIONES -->
+        <div class="seccion-deducciones">
+            <h2>Deducciones</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Cantidades</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Salud</td>
+                        <td>4%</td>
+                        <td class="valor-deduccion" id="deduccionSalud">$ 0</td>
+                    </tr>
+                    <tr>
+                        <td>Pensión</td>
+                        <td>4%</td>
+                        <td class="valor-deduccion" id="deduccionPension">$ 0</td>
+                    </tr>
+                    <tr>
+                        <td>Restaurante</td>
+                        <td>
+                            <input type="number" id="unidadesRestaurante" value="0" style="width: 80px;"> unidades
+                        </td>
+                        <td class="valor-deduccion" id="valorRestaurante">$ 0</td>
+                    </tr>
+                    <tr>
+                        <td>Abono de Nómina</td>
+                        <td>
+                            <input type="number" id="abonoNomina" value="0" placeholder="$ 0">
+                        </td>
+                        <td class="valor-deduccion" id="valorAbonoNomina">$ 0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="total-deducciones">
+                <strong>Total Deducciones: <span id="totalDeducciones">$ 0</span></strong>
+            </div>
+            
+            <div class="total-final">
+                <h2>Total a Pagar: <span id="totalPagar">$ 0</span></h2>
+            </div>
+        </div>
+        
+    </div>
+ </div>
+
+ <script src="calculadoraNomina.js"></script>
+
+    </body>
+
+</html>

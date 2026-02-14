@@ -1,0 +1,275 @@
+/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family :'Franklin Gothic Medium';
+    background-color: #e2e4e0;
+    padding: 20px;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ====*/
+
+.container {
+    max-width : 1200px;
+    margin : 0 auto;
+    background-color: rgb(206, 229, 196);
+    padding : 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+/*======= TITULOS ======*/
+
+h1 {
+    text-align :center;
+    margin-bottom : 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+h2 {
+    color :#444;
+    margin-bottom : 20px;
+    font-size: 24px;
+    border-bottom : 2.2px solid #4caf50;
+    padding-bottom : 10px;
+}
+
+/* ====== SECCIONES ======*/
+
+.seccion-basica
+.seccion-extras
+.seccion-deducciones
+.total-final
+
+{
+
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    box-shadow: -3px -2px 3px rgba(0, 0, 0, 0.1);
+    
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /* 3 columnas iguales */
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.campo {
+    flex :1;
+    display: flex;
+    flex-direction: column; 
+    
+     
+}
+
+/* ===== TODOS LOS INPUTS (TEXT Y NUMBER) ===== */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* ===== INPUTS DE MONEDA (FORMATEADOS) ===== */
+.input-moneda {
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+
+
+/* ===== VALORES CALCULADOS ===== */
+.valor-calculado {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    cursor: not-allowed;
+    box-sizing: border-box;
+}
+
+/* ===== AGREGAR CONCEPTO ===== */
+.agregar-concepto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-agregar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-agregar:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.btn-agregar:active {
+    transform: scale(0.95);
+}
+
+.selector-concepto {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    background-color: #e7e0df;
+}
+
+.selector-concepto:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* ===== BOTÓN ELIMINAR ===== */
+.btn-eliminar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-eliminar:hover {
+    background-color: #74221c;
+}
+
+/* ===== TABLAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    vertical-align: middle;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.valor-hora,
+.valor-total,
+.valor-deduccion {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== TOTALES ===== */
+.total-devengado,
+.total-deducciones {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 4px solid #4CAF50;
+    font-size: 18px;
+    text-align: right;
+}
+
+.total-final {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== RESPONSIVE (para móviles) ===== */
+@media (max-width: 768px) {
+    .fila {
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    .agregar-concepto {
+        flex-direction: column;
+    }
+    
+    .btn-agregar {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
