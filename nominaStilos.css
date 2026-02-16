@@ -47,7 +47,14 @@ h2 {
 .seccion-deducciones
 .total-final
 
+
+
 {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
 
     margin-bottom: 40px;
     padding: 10px;
@@ -244,6 +251,13 @@ tr:hover {
 
 /* ===== RESPONSIVE (para móviles) ===== */
 @media (max-width: 768px) {
+
+.seccion-basica
+.seccion-extras
+.seccion-deducciones
+.total-final {
+    grid-template-columns: 1fr;
+  }
     .fila {
         flex-direction: column;
     }
